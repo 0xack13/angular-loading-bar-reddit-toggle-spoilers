@@ -41,7 +41,7 @@ angular.module('LoadingBarExample', ['chieffancypants.loadingBar', 'ngAnimate'])
 
     $scope.fetch = function() {
       $scope.subreddit = getRandomSubreddit();
-      $http.jsonp('http://www.reddit.com/r/' + $scope.subreddit + '.json?limit=50&jsonp=JSON_CALLBACK').success(function(data) {
+      $http.jsonp('https://www.reddit.com/r/' + $scope.subreddit + '.json?limit=50&jsonp=JSON_CALLBACK').success(function(data) {
         $scope.posts = data.data.children;
       });
     };
